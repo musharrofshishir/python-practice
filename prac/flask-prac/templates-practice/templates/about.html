@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask App</title>
-</head>
-<body>
-    <h1>Hello, this is the first flask web application. This is the about page.</h1>
-    <h3><a href="{{ url_for('index') }}">Go Back</a></h3>
-</body>
-</html>
+{% extends "layout.html" %}
+{% block heading %}
+About Page
+{% endblock %}
+
+{% block body%}
+    <h5>Just learning the flask's basic things...this is kind of an example of using the routing and url_for() with the help of template inheritance</h5>
+
+    <a href="{{ url_for('index') }}">Let's go back...</a>
+{% endblock %}
