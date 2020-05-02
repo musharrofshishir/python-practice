@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Notes</title>
+</head>
+<body>
+    <h2>Todo list</h2>
+
+    <ul>
+        {% for note in notes %}
+            <li>{{ note }}</li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('todos') }}" method="post">
+        <input type="text" name="note" placeholder="Enter your item to do...">
+        <button>Add</button>
+    </form>
+</body>
+</html>
