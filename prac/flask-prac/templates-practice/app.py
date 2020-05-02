@@ -6,16 +6,14 @@ app.debug = True
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    hello = "Hello User!"
+    return render_template("index.html", head=hello)
 
-@app.route("/<string:name>")
-def home(name):
-    if name == "about.html":
-        return render_template("about.html")
-    elif name == "index.html":
-        return render_template("index.html")
-    else:
-        return render_template("index.html")
+@app.route("/about")
+def about():
+    return render_template("about.html") 
+
+
 # @app.route("/about.html")
 # def about():
 #     return render_template("about.html")
