@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block contactactive %}active{% endblock %}
+
+{% block heading_1 %}
+Contact Page
+{% endblock %}
+
+{% block para_1 %}
+Now, This is my Contact Page. You came to this page via flask-routing. That's a core feature flask provides.
+{% endblock %}
+
+{% block contact_form %}
+
+<div class="form-wrapper">
+    <div class="form-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mt-5">
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
